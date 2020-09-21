@@ -14,6 +14,7 @@ Card Shoe::drawCard(void)
 
 void Shoe::shuffleCards(void)
 {
+    std::srand(time(0));
     std::random_shuffle(deck.begin(),deck.end());
 }
 

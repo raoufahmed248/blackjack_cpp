@@ -1,5 +1,6 @@
 #include "hand.h"
 #include "cardConstants.h"
+#include <iostream>
 
 int Hand::getValue(void)
 {
@@ -72,9 +73,43 @@ int Hand::getValue(void)
     return value;
 }
 
+int Hand::numberOfCards(void)
+{
+    return cards.size();
+}
+
 void Hand::addCard(Card card)
 {
     cards.push_back(card);
+}
+
+void Hand::printHand(void)
+{
+    std::cout << "----------Cards-----------\n";
+    for(auto x: cards)
+    {
+        if(x.getFlipped())
+        {
+            std::cout << " Card Flipped \n";
+        }
+        else
+        {
+            x.printCard();
+        }
+    }
+    std::cout << "---------------------------\n";
+}
+
+void Hand::flipOverCards(void)
+{
+    for(int x = 0; x < cards.size(); x++)
+    {
+        if(cards[x].getFlipped())
+        {
+            cards[x].flipCard();
+            std:: cout <<"should've flipped: " << cards[x].getFlipped() << "\n";
+        }
+    }
 }
 
 // int Hand::ValueOfCard(Card card)

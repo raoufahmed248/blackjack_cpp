@@ -2,6 +2,7 @@
 #include "hand.h"
 #include "cardConstants.h"
 #include "userPlayer.h"
+#include "blackJack.h"
 #include <iostream>
 
 
@@ -29,8 +30,13 @@ int main()
     
     // std::cout << "hand value: " << hand.getValue() << "\n";
 
-    userPlayer you = userPlayer(5000);
-    you.getBetChoice();
-    std::cout << "\n Betted: " << you.getBetAmount(); 
+    // userPlayer you = userPlayer(5000);
+    // you.getBetChoice();
+    // std::cout << "\n Betted: " << you.getBetAmount();
+    
+    // you.getCardAction();
+    BlackJack game;
+    game.run();
+
 
 }

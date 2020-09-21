@@ -10,6 +10,8 @@ class dealerPlayer:public Player
     public:
         void flipOverCard(void);
         Move getCardAction(void);
+        void addCardToHand(Card card);
+    
 };
 
 #endif

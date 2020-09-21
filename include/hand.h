@@ -10,8 +10,10 @@ class Hand
 {
     public:
         int getValue(void);
+        int numberOfCards(void);
         void addCard(Card card);
-        
+        void printHand(void);
+        void flipOverCards(void);
     private:
         std::vector<Card> cards;
         int handValue;

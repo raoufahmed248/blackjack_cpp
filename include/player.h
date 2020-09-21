@@ -6,11 +6,15 @@
 class Player
 {
     public:
-        //virtual Move getCardAction(void);
+        virtual Move getCardAction(void) = 0;
         int getHandValue(void);
-        void addCardToHand(Card card);
-    private:
+        virtual void addCardToHand(Card card);
+        void printCardsInHand(void);
+        bool getBustStatus(void);
+        void setPlayerBust(void);
+    protected:
         Hand hand;
+        bool busts = false;
 };
 
 #endif

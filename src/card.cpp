@@ -25,7 +25,7 @@ bool Card::getFlipped(void)
 
 void Card::flipCard(void)
 {
-    isFlipped = !isFlipped;
+    isFlipped = false;
 }
 
 void Card::printCard(void)

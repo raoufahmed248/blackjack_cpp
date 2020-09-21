@@ -12,7 +12,7 @@ class userPlayer:public Player
         int getBetAmount(void);
         void resetBetAmount(void);
         void addWinnings(int winningAmount);
-        userPlayer(int startingMoney);
+        void setStartingMoney(int startingMoney);
     private:
         int remainingMoney;
         int betAmount;

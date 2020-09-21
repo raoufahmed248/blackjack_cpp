@@ -13,11 +13,10 @@ class BlackJack
     public:
         void run(void);
     private:
-        dealerPlayer *Dealer;
-        userPlayer *Player;
-        Shoe *shoe;
+        dealerPlayer dealerplayer;
+        userPlayer userplayer;
+        Shoe shoe = Shoe(5);
         Winner winner = NotDecided;
-                
 };
 
 #endif
